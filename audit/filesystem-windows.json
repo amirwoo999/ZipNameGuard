@@ -1,0 +1,50 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10",
+  "unicode_version": "15.0.0",
+  "scope": "Only this temporary directory/volume and normal Python file APIs.",
+  "observations": {
+    "ascii_case": {
+      "same_file": true,
+      "first_content_after": "second",
+      "names": [
+        "README.txt"
+      ]
+    },
+    "trailing_dot": {
+      "same_file": true,
+      "first_content_after": "second",
+      "names": [
+        "foo"
+      ]
+    },
+    "trailing_space": {
+      "same_file": true,
+      "first_content_after": "second",
+      "names": [
+        "foo"
+      ]
+    },
+    "canonical_unicode": {
+      "same_file": false,
+      "first_content_after": "first",
+      "names": [
+        "cafe\u0301",
+        "caf\u00e9"
+      ]
+    },
+    "full_casefold": {
+      "same_file": false,
+      "first_content_after": "first",
+      "names": [
+        "strasse",
+        "stra\u00dfe"
+      ]
+    },
+    "ascii_component_256": {
+      "created": false,
+      "errno": 22,
+      "winerror": null
+    }
+  }
+}

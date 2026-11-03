@@ -1,0 +1,257 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "published": false,
+  "commands": [
+    {
+      "command": [
+        "<SANDBOX>\\builder\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "build==1.3.0"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "Collecting build==1.3.0\n  Using cached build-1.3.0-py3-none-any.whl.metadata (5.6 kB)\nCollecting packaging>=19.1 (from build==1.3.0)\n  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)\nCollecting pyproject_hooks (from build==1.3.0)\n  Using cached pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)\nCollecting colorama (from build==1.3.0)\n  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)\nUsing cached build-1.3.0-py3-none-any.whl (23 kB)\nUsing cached packaging-26.3-py3-none-any.whl (129 kB)\nUsing cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)\nUsing cached pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)\nInstalling collected packages: pyproject_hooks, packaging, colorama, build\nSuccessfully installed build-1.3.0 colorama-0.4.6 packaging-26.3 pyproject_hooks-1.3.3\n",
+      "stderr": "\n[notice] A new release of pip is available: 25.0.1 -> 26.2.2\n[notice] To update, run: <SANDBOX>\\builder\\Scripts\\python.exe -m pip install --upgrade pip\n"
+    },
+    {
+      "command": [
+        "<SANDBOX>\\builder\\Scripts\\python.exe",
+        "-m",
+        "build",
+        "--outdir",
+        "<SANDBOX>\\artifacts"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - setuptools>=77\n* Getting build dependencies for sdist...\nrunning egg_info\ncreating src\\zipnameguard.egg-info\nwriting src\\zipnameguard.egg-info\\PKG-INFO\nwriting dependency_links to src\\zipnameguard.egg-info\\dependency_links.txt\nwriting entry points to src\\zipnameguard.egg-info\\entry_points.txt\nwriting requirements to src\\zipnameguard.egg-info\\requires.txt\nwriting top-level names to src\\zipnameguard.egg-info\\top_level.txt\nwriting manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nreading manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\n* Building sdist...\nrunning sdist\nrunning egg_info\nwriting src\\zipnameguard.egg-info\\PKG-INFO\nwriting dependency_links to src\\zipnameguard.egg-info\\dependency_links.txt\nwriting entry points to src\\zipnameguard.egg-info\\entry_points.txt\nwriting requirements to src\\zipnameguard.egg-info\\requires.txt\nwriting top-level names to src\\zipnameguard.egg-info\\top_level.txt\nreading manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nrunning check\ncreating zipnameguard-0.1.0\ncreating zipnameguard-0.1.0\\audit\ncreating zipnameguard-0.1.0\\benchmarks\ncreating zipnameguard-0.1.0\\docs\ncreating zipnameguard-0.1.0\\examples\ncreating zipnameguard-0.1.0\\src\\zipnameguard\ncreating zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncreating zipnameguard-0.1.0\\tests\ncopying files to zipnameguard-0.1.0...\ncopying CHANGELOG.md -> zipnameguard-0.1.0\ncopying CONTRIBUTING.md -> zipnameguard-0.1.0\ncopying LICENSE -> zipnameguard-0.1.0\ncopying MANIFEST.in -> zipnameguard-0.1.0\ncopying PRE_RELEASE_AUDIT.md -> zipnameguard-0.1.0\ncopying README.md -> zipnameguard-0.1.0\ncopying SECURITY.md -> zipnameguard-0.1.0\ncopying pyproject.toml -> zipnameguard-0.1.0\ncopying audit\\check_registries.py -> zipnameguard-0.1.0\\audit\ncopying audit\\compare_competitors.py -> zipnameguard-0.1.0\\audit\ncopying audit\\probe_filesystem.py -> zipnameguard-0.1.0\\audit\ncopying audit\\verify_release.py -> zipnameguard-0.1.0\\audit\ncopying benchmarks\\audit-results.json -> zipnameguard-0.1.0\\benchmarks\ncopying benchmarks\\benchmark.py -> zipnameguard-0.1.0\\benchmarks\ncopying benchmarks\\results.json -> zipnameguard-0.1.0\\benchmarks\ncopying docs\\DESIGN.md -> zipnameguard-0.1.0\\docs\ncopying docs\\DEVELOPMENT_LOG.md -> zipnameguard-0.1.0\\docs\ncopying docs\\DIRECTORY_SCANNING.md -> zipnameguard-0.1.0\\docs\ncopying docs\\REPORT.md -> zipnameguard-0.1.0\\docs\ncopying docs\\RESEARCH.md -> zipnameguard-0.1.0\\docs\ncopying docs\\SELF_REVIEW.md -> zipnameguard-0.1.0\\docs\ncopying examples\\create_demo.py -> zipnameguard-0.1.0\\examples\ncopying examples\\zipnameguard.toml -> zipnameguard-0.1.0\\examples\ncopying src\\zipnameguard\\__init__.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard\\__main__.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard\\cli.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard\\models.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard\\rules.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard\\scan.py -> zipnameguard-0.1.0\\src\\zipnameguard\ncopying src\\zipnameguard.egg-info\\PKG-INFO -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying src\\zipnameguard.egg-info\\SOURCES.txt -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying src\\zipnameguard.egg-info\\dependency_links.txt -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying src\\zipnameguard.egg-info\\entry_points.txt -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying src\\zipnameguard.egg-info\\requires.txt -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying src\\zipnameguard.egg-info\\top_level.txt -> zipnameguard-0.1.0\\src\\zipnameguard.egg-info\ncopying tests\\archive_corpus.py -> zipnameguard-0.1.0\\tests\ncopying tests\\corpus-manifest.json -> zipnameguard-0.1.0\\tests\ncopying tests\\test_adversarial.py -> zipnameguard-0.1.0\\tests\ncopying tests\\test_cli.py -> zipnameguard-0.1.0\\tests\ncopying tests\\test_rules.py -> zipnameguard-0.1.0\\tests\ncopying tests\\test_scan.py -> zipnameguard-0.1.0\\tests\nWriting zipnameguard-0.1.0\\setup.cfg\nCreating tar archive\nremoving 'zipnameguard-0.1.0' (and everything under it)\n* Building wheel from sdist\n* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - setuptools>=77\n* Getting build dependencies for wheel...\nrunning egg_info\nwriting src\\zipnameguard.egg-info\\PKG-INFO\nwriting dependency_links to src\\zipnameguard.egg-info\\dependency_links.txt\nwriting entry points to src\\zipnameguard.egg-info\\entry_points.txt\nwriting requirements to src\\zipnameguard.egg-info\\requires.txt\nwriting top-level names to src\\zipnameguard.egg-info\\top_level.txt\nreading manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\n* Building wheel...\nrunning bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\zipnameguard\ncopying src\\zipnameguard\\cli.py -> build\\lib\\zipnameguard\ncopying src\\zipnameguard\\models.py -> build\\lib\\zipnameguard\ncopying src\\zipnameguard\\rules.py -> build\\lib\\zipnameguard\ncopying src\\zipnameguard\\scan.py -> build\\lib\\zipnameguard\ncopying src\\zipnameguard\\__init__.py -> build\\lib\\zipnameguard\ncopying src\\zipnameguard\\__main__.py -> build\\lib\\zipnameguard\nrunning egg_info\nwriting src\\zipnameguard.egg-info\\PKG-INFO\nwriting dependency_links to src\\zipnameguard.egg-info\\dependency_links.txt\nwriting entry points to src\\zipnameguard.egg-info\\entry_points.txt\nwriting requirements to src\\zipnameguard.egg-info\\requires.txt\nwriting top-level names to src\\zipnameguard.egg-info\\top_level.txt\nreading manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'src\\zipnameguard.egg-info\\SOURCES.txt'\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\zipnameguard\ncopying build\\lib\\zipnameguard\\cli.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\ncopying build\\lib\\zipnameguard\\models.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\ncopying build\\lib\\zipnameguard\\rules.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\ncopying build\\lib\\zipnameguard\\scan.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\ncopying build\\lib\\zipnameguard\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\ncopying build\\lib\\zipnameguard\\__main__.py -> build\\bdist.win-amd64\\wheel\\.\\zipnameguard\nrunning install_egg_info\nCopying src\\zipnameguard.egg-info to build\\bdist.win-amd64\\wheel\\.\\zipnameguard-0.1.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\zipnameguard-0.1.0.dist-info\\WHEEL\ncreating '<SANDBOX>\\\\artifacts\\\\.tmp-sa56c6zh\\\\zipnameguard-0.1.0-py3-none-any.whl' and adding 'build\\\\bdist.win-amd64\\\\wheel' to it\nadding 'zipnameguard/__init__.py'\nadding 'zipnameguard/__main__.py'\nadding 'zipnameguard/cli.py'\nadding 'zipnameguard/models.py'\nadding 'zipnameguard/rules.py'\nadding 'zipnameguard/scan.py'\nadding 'zipnameguard-0.1.0.dist-info/licenses/LICENSE'\nadding 'zipnameguard-0.1.0.dist-info/METADATA'\nadding 'zipnameguard-0.1.0.dist-info/WHEEL'\nadding 'zipnameguard-0.1.0.dist-info/entry_points.txt'\nadding 'zipnameguard-0.1.0.dist-info/top_level.txt'\nadding 'zipnameguard-0.1.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\nSuccessfully built zipnameguard-0.1.0.tar.gz and zipnameguard-0.1.0-py3-none-any.whl\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "<SANDBOX>\\artifacts\\zipnameguard-0.1.0-py3-none-any.whl"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "Processing <SANDBOX>\\artifacts\\zipnameguard-0.1.0-py3-none-any.whl\nInstalling collected packages: zipnameguard\nSuccessfully installed zipnameguard-0.1.0\n",
+      "stderr": "\n[notice] A new release of pip is available: 25.0.1 -> 26.2.2\n[notice] To update, run: <SANDBOX>\\installed\\Scripts\\python.exe -m pip install --upgrade pip\n"
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-c",
+        "import importlib.metadata as m,json,zipnameguard,sys; from pathlib import Path; d=m.distribution('zipnameguard'); assert d.version == zipnameguard.__version__ == '0.1.0'; assert d.metadata['Name'] == 'zipnameguard'; assert d.metadata['Requires-Python'] == '>=3.11'; assert d.metadata['License-Expression'] == 'MIT'; assert ('zipnameguard','zipnameguard.cli:main') in [(e.name,e.value) for e in d.entry_points]; assert Path(zipnameguard.__file__).is_relative_to(Path(sys.prefix)); assert all('extra ==' in r for r in (d.requires or [])); print(json.dumps({'name':d.metadata['Name'],'version':d.version,'summary':d.metadata['Summary'],'requires_python':d.metadata['Requires-Python'],'license_expression':d.metadata['License-Expression'],'dependencies':d.requires,'import_path':zipnameguard.__file__,'entry_points':[(e.name,e.value) for e in d.entry_points]}))"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\"name\": \"zipnameguard\", \"version\": \"0.1.0\", \"summary\": \"Cross-platform release linter for ZIP filenames\", \"requires_python\": \">=3.11\", \"license_expression\": \"MIT\", \"dependencies\": [\"ruff==0.14.3; extra == \\\"dev\\\"\", \"mypy==1.18.2; extra == \\\"dev\\\"\", \"build==1.3.0; extra == \\\"dev\\\"\"], \"import_path\": \"<SANDBOX>\\\\installed\\\\Lib\\\\site-packages\\\\zipnameguard\\\\__init__.py\", \"entry_points\": [[\"zipnameguard\", \"zipnameguard.cli:main\"]]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-m",
+        "zipnameguard",
+        "--version"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "ZipNameGuard 0.1.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-m",
+        "zipnameguard",
+        "--help"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "usage: __main__.py [-h] [--version] [--json] [--strict | --no-strict]\n                   [--config CONFIG] [--max-archive-bytes MAX_ARCHIVE_BYTES]\n                   [--max-entries MAX_ENTRIES]\n                   archives [archives ...]\n\nCross-platform release linter for ZIP filenames. No extraction.\n\npositional arguments:\n  archives              ZIP files to check (quote paths with spaces)\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n  --json                emit a versioned JSON report\n  --strict, --no-strict\n                        fail on warnings as well as errors\n  --config CONFIG       explicit TOML configuration file\n  --max-archive-bytes MAX_ARCHIVE_BYTES\n                        input size cap (default 268435456)\n  --max-entries MAX_ENTRIES\n                        entry cap after metadata parsing (default 100000)\n\nExit: 0 no policy errors; 1 errors (or strict warnings); 2 input/config\nfailure. A clean report does not mean extraction is safe. Full destination\npath limits and payloads are not checked.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<SANDBOX>\\checkout\\tests",
+        "-v"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "",
+      "stderr": "test_bounded_metadata_mutations_have_no_untranslated_exceptions (test_adversarial.CorpusTests.test_bounded_metadata_mutations_have_no_untranslated_exceptions) ... ok\ntest_deterministic_writer (test_adversarial.CorpusTests.test_deterministic_writer) ... ok\ntest_exact_corpus_results (test_adversarial.CorpusTests.test_exact_corpus_results) ... ok\ntest_known_non_goals_do_not_validate_payload_or_local_header (test_adversarial.CorpusTests.test_known_non_goals_do_not_validate_payload_or_local_header) ... ok\ntest_malformed_metadata (test_adversarial.CorpusTests.test_malformed_metadata) ... ok\ntest_many_entries_limit_boundary (test_adversarial.CorpusTests.test_many_entries_limit_boundary) ... ok\ntest_nul_input_path_has_useful_api_error (test_adversarial.CorpusTests.test_nul_input_path_has_useful_api_error) ... ok\ntest_ordinary_fixtures_have_valid_payloads (test_adversarial.CorpusTests.test_ordinary_fixtures_have_valid_payloads) ... ok\ntest_parser_warnings_do_not_break_json_contract (test_adversarial.CorpusTests.test_parser_warnings_do_not_break_json_contract) ... ok\ntest_real_empty_unicode_extra_has_no_stderr_leak (test_adversarial.CorpusTests.test_real_empty_unicode_extra_has_no_stderr_leak) ... ok\ntest_writer_preserves_names_including_windows_backslash (test_adversarial.CorpusTests.test_writer_preserves_names_including_windows_backslash) ... ok\ntest_zip64_central_metadata_with_small_payload (test_adversarial.CorpusTests.test_zip64_central_metadata_with_small_payload) ... ok\ntest_deterministic_output (test_cli.CliTests.test_deterministic_output) ... ok\ntest_exit_statuses (test_cli.CliTests.test_exit_statuses) ... ok\ntest_help_version (test_cli.CliTests.test_help_version) ... ok\ntest_invalid_arguments (test_cli.CliTests.test_invalid_arguments) ... ok\ntest_invalid_config (test_cli.CliTests.test_invalid_config) ... ok\ntest_json_golden_case_collision (test_cli.CliTests.test_json_golden_case_collision) ... ok\ntest_json_reports_success_and_errors (test_cli.CliTests.test_json_reports_success_and_errors) ... ok\ntest_leading_dash_path_and_unicode_input_path (test_cli.CliTests.test_leading_dash_path_and_unicode_input_path) ... ok\ntest_missing_invalid_utf8_and_directory_config (test_cli.CliTests.test_missing_invalid_utf8_and_directory_config) ... ok\ntest_size_config_override_and_empty_table (test_cli.CliTests.test_size_config_override_and_empty_table) ... ok\ntest_strict_and_override_config (test_cli.CliTests.test_strict_and_override_config) ... ok\ntest_terminal_escape (test_cli.CliTests.test_terminal_escape) ... ok\ntest_text_operational_error_is_actionable (test_cli.CliTests.test_text_operational_error_is_actionable) ... ok\ntest_absolute_and_drive_paths (test_rules.NameRulesTests.test_absolute_and_drive_paths) ... ok\ntest_alternate_name_field_after_unrelated_extra (test_rules.NameRulesTests.test_alternate_name_field_after_unrelated_extra) ... ok\ntest_backslashes_and_noncanonical_paths (test_rules.NameRulesTests.test_backslashes_and_noncanonical_paths) ... ok\ntest_case_and_unicode_collisions (test_rules.NameRulesTests.test_case_and_unicode_collisions) ... ok\ntest_clean_including_explicit_directory_after_child (test_rules.NameRulesTests.test_clean_including_explicit_directory_after_child) ... ok\ntest_deep_paths_do_not_require_recursion_or_full_prefix_copies (test_rules.NameRulesTests.test_deep_paths_do_not_require_recursion_or_full_prefix_copies) ... ok\ntest_directory_alias_still_reports_after_explicit_directory (test_rules.NameRulesTests.test_directory_alias_still_reports_after_explicit_directory) ... ok\ntest_directory_metadata_variants (test_rules.NameRulesTests.test_directory_metadata_variants) ... ok\ntest_duplicate (test_rules.NameRulesTests.test_duplicate) ... ok\ntest_empty_name (test_rules.NameRulesTests.test_empty_name) ... ok\ntest_file_directory_conflicts_in_both_orders (test_rules.NameRulesTests.test_file_directory_conflicts_in_both_orders) ... ok\ntest_implicit_directory_collision (test_rules.NameRulesTests.test_implicit_directory_collision) ... ok\ntest_normalized_path_alias (test_rules.NameRulesTests.test_normalized_path_alias) ... ok\ntest_nul_uses_original_filename (test_rules.NameRulesTests.test_nul_uses_original_filename) ... ok\ntest_parent_paths (test_rules.NameRulesTests.test_parent_paths) ... ok\ntest_related_member_index_and_determinism (test_rules.NameRulesTests.test_related_member_index_and_determinism) ... ok\ntest_symlinks_and_special_files (test_rules.NameRulesTests.test_symlinks_and_special_files) ... ok\ntest_trailing_characters (test_rules.NameRulesTests.test_trailing_characters) ... ok\ntest_windows_characters (test_rules.NameRulesTests.test_windows_characters) ... ok\ntest_windows_devices (test_rules.NameRulesTests.test_windows_devices) ... ok\ntest_byte_limit_exact_boundary_and_permission_error (test_scan.ScanTests.test_byte_limit_exact_boundary_and_permission_error) ... ok\ntest_clean_and_empty (test_scan.ScanTests.test_clean_and_empty) ... ok\ntest_invalid_api_limits (test_scan.ScanTests.test_invalid_api_limits) ... ok\ntest_limits (test_scan.ScanTests.test_limits) ... ok\ntest_missing_corrupt_and_directory (test_scan.ScanTests.test_missing_corrupt_and_directory) ... ok\ntest_no_payload_reads_or_writes (test_scan.ScanTests.test_no_payload_reads_or_writes) ... ok\ntest_nul_from_real_central_directory (test_scan.ScanTests.test_nul_from_real_central_directory) ... ok\ntest_problem_reproduction_crc_passes_nonportable_archive (test_scan.ScanTests.test_problem_reproduction_crc_passes_nonportable_archive) ... ok\n\n----------------------------------------------------------------------\nRan 53 tests in 6.515s\n\nOK\n"
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\python.exe",
+        "<SANDBOX>\\checkout\\tests\\archive_corpus.py",
+        "--output",
+        "<SANDBOX>\\corpus"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "Created 36 deterministic archives in <SANDBOX>\\corpus\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\valid-basic.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\valid-basic.zip\",\n      \"entries\": 3,\n      \"findings\": []\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\case.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\case.zip\",\n      \"entries\": 2,\n      \"findings\": [\n        {\n          \"code\": \"portable-name-collision\",\n          \"severity\": \"error\",\n          \"member\": \"readme.txt\",\n          \"entry_index\": 1,\n          \"message\": \"Case/normalization-insensitive filesystems (common on Windows/macOS) may merge these paths; rename one. Policy: NFC, casefold, trim dots/spaces.\",\n          \"related_member\": \"README.txt\"\n        }\n      ]\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\trailing-space.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\trailing-space.zip\",\n      \"entries\": 2,\n      \"findings\": [\n        {\n          \"code\": \"trailing-dot-space\",\n          \"severity\": \"error\",\n          \"member\": \"foo \",\n          \"entry_index\": 1,\n          \"message\": \"Windows tools may trim trailing dots/spaces; rename the component.\",\n          \"related_member\": null\n        },\n        {\n          \"code\": \"portable-name-collision\",\n          \"severity\": \"error\",\n          \"member\": \"foo \",\n          \"entry_index\": 1,\n          \"message\": \"Case/normalization-insensitive filesystems (common on Windows/macOS) may merge these paths; rename one. Policy: NFC, casefold, trim dots/spaces.\",\n          \"related_member\": \"foo\"\n        }\n      ]\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\unicode-nfc-nfd.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\unicode-nfc-nfd.zip\",\n      \"entries\": 2,\n      \"findings\": [\n        {\n          \"code\": \"portable-name-collision\",\n          \"severity\": \"error\",\n          \"member\": \"cafe\\u0301.txt\",\n          \"entry_index\": 1,\n          \"message\": \"Case/normalization-insensitive filesystems (common on Windows/macOS) may merge these paths; rename one. Policy: NFC, casefold, trim dots/spaces.\",\n          \"related_member\": \"caf\\u00e9.txt\"\n        }\n      ]\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\file-directory.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\file-directory.zip\",\n      \"entries\": 2,\n      \"findings\": [\n        {\n          \"code\": \"file-directory-conflict\",\n          \"severity\": \"error\",\n          \"member\": \"thing/child\",\n          \"entry_index\": 1,\n          \"message\": \"A file blocks a directory required by another entry on common filesystems; rename one path.\",\n          \"related_member\": \"thing\"\n        }\n      ]\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--strict",
+        "--json",
+        "<SANDBOX>\\corpus\\long-ascii-component.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\corpus\\\\long-ascii-component.zip\",\n      \"entries\": 1,\n      \"findings\": [\n        {\n          \"code\": \"long-component\",\n          \"severity\": \"warning\",\n          \"member\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n          \"entry_index\": 0,\n          \"message\": \"A component exceeds 255 UTF-8 bytes or UTF-16 units; shorten it for ext4 and common Windows volumes.\",\n          \"related_member\": null\n        }\n      ]\n    }\n  ],\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<SANDBOX>\\installed\\Scripts\\zipnameguard.exe",
+        "--json",
+        "<SANDBOX>\\missing.zip"
+      ],
+      "cwd": "<SANDBOX>\\outside-checkout",
+      "exit": 2,
+      "expected_exit": 2,
+      "stdout": "{\n  \"schema_version\": 1,\n  \"reports\": [],\n  \"errors\": [\n    {\n      \"archive\": \"<SANDBOX>\\\\missing.zip\",\n      \"message\": \"Cannot inspect archive: [Errno 2] No such file or directory: 'C:\\\\\\\\Users\\\\\\\\Amir\\\\\\\\Documents\\\\\\\\ChatGPT\\\\\\\\Problem solving\\\\\\\\audit\\\\\\\\verification-sandbox\\\\\\\\release-xsge_w5f\\\\\\\\missing.zip'\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.EXE",
+        "-NoProfile",
+        "-File",
+        "<SANDBOX>\\readme.ps1"
+      ],
+      "cwd": "<SANDBOX>\\checkout",
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout": "Processing <SANDBOX>\\checkout\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'done'\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: zipnameguard\n  Building wheel for zipnameguard (pyproject.toml): started\n  Building wheel for zipnameguard (pyproject.toml): finished with status 'done'\n  Created wheel for zipnameguard: filename=zipnameguard-0.1.0-py3-none-any.whl size=13411 sha256=394741fa3a0c06d052067a8473e814ff47816aaaaa3f64b6dad405eb4bdd4e6d\n  Stored in directory: <USER>\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-1h03xp0h\\wheels\\da\\42\\5f\\8e40174c875273151347db78451a517bcb7e2bc80bd2a2a3c1\nSuccessfully built zipnameguard\nInstalling collected packages: zipnameguard\nSuccessfully installed zipnameguard-0.1.0\nCreated demo.zip; scan it with: zipnameguard demo.zip\n\"demo.zip\": 4 entries, 3 filename-policy findings\n  ERROR portable-name-collision entry 1 \"readme.md\"; related \"README.md\"\n    Case/normalization-insensitive filesystems (common on Windows/macOS) may merge these paths; rename one. Policy: NFC, casefold, trim dots/spaces.\n  ERROR windows-device entry 2 \"assets/CON.txt\"\n    Rename a component using a Windows reserved device name.\n  ERROR windows-character entry 3 \"logs/12:30.txt\"\n    Rename a component containing a Win32 reserved character.\n",
+      "stderr": "\n[notice] A new release of pip is available: 25.0.1 -> 26.2.2\n[notice] To update, run: python.exe -m pip install --upgrade pip\n"
+    }
+  ],
+  "metadata": {
+    "name": "zipnameguard",
+    "version": "0.1.0",
+    "summary": "Cross-platform release linter for ZIP filenames",
+    "requires_python": ">=3.11",
+    "license_expression": "MIT",
+    "dependencies": [
+      "ruff==0.14.3; extra == \"dev\"",
+      "mypy==1.18.2; extra == \"dev\"",
+      "build==1.3.0; extra == \"dev\""
+    ],
+    "import_path": "<SANDBOX>\\installed\\Lib\\site-packages\\zipnameguard\\__init__.py",
+    "entry_points": [
+      [
+        "zipnameguard",
+        "zipnameguard.cli:main"
+      ]
+    ]
+  },
+  "artifact_sha256": {
+    "zipnameguard-0.1.0-py3-none-any.whl": "ba99070275b3dae265b413ed1ea6d82ac49881a606097693d00faa81edb56107",
+    "zipnameguard-0.1.0.tar.gz": "e5fa8bf0350f3c693c8113d48a9cb2bf88f258c2737f8c806b6c4fcf2dcd83b0"
+  },
+  "status": "passed"
+}

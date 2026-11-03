@@ -1,0 +1,4 @@
+[zipnameguard]
+strict = true
+max_archive_bytes = 268435456
+max_entries = 100000

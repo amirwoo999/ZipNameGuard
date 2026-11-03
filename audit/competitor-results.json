@@ -1,0 +1,1236 @@
+{
+  "versions": {
+    "pathward": "0.2.0",
+    "zipguard": "0.2.0"
+  },
+  "note": "Default policies; raw evidence, not a comprehensive security comparison.",
+  "cases": {
+    "valid-basic": {
+      "pathward": {
+        "accepted": true,
+        "files": 2
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 3,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "README.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "dir/file.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "dir/",
+              "decision": "skipped",
+              "reason": "directory"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "valid-unicode": {
+      "pathward": {
+        "accepted": true,
+        "files": 5
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 5,
+            "allowed": 5,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "\u65e5\u672c\u8a9e.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "caf\u00e9.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "\ud83d\ude00.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "\u0130.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "\u0131.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "valid-boundaries": {
+      "pathward": {
+        "accepted": true,
+        "files": 5
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 5,
+            "allowed": 5,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9\u00e9",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM0",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM10",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": ".hidden",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "legacy-cp437": {
+      "pathward": {
+        "accepted": true,
+        "files": 1
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "caf\u00e9.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "case": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'readme.txt'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "README.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "readme.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "trailing-dot": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "component with a trailing space or dot is not portable: 'foo.'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "foo",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "foo.",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "trailing-space": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "component with a trailing space or dot is not portable: 'foo '"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "foo",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "foo ",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "devices": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "reserved Windows path component is not allowed: 'CON'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 10,
+            "allowed": 10,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "CON",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "PRN",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "AUX",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "NUL",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM1",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "LPT1",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM\u00b9",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "LPT\u00b3",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "CONIN$",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "CONOUT$",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "device-extensions": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "reserved Windows path component is not allowed: 'CON.tar.gz'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 10,
+            "allowed": 10,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "CON.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "PRN.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "AUX.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "NUL.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM1.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "LPT1.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "COM\u00b9.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "LPT\u00b3.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "CONIN$.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "CONOUT$.tar.gz",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "forbidden": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "Windows alternate-data-stream syntax is not allowed: 'part:name'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 9,
+            "allowed": 9,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "part<name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part>name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part:name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part\"name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part|name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part?name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part*name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part\u0001name",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "part\u001fname",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "nul": {
+      "pathward": {
+        "accepted": true,
+        "files": 1
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "before",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "duplicate": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'same'"
+      },
+      "zipguard": {
+        "exit": 2,
+        "output": "\u001b[2mDry run \u2014 analyzing\u001b[0m \u001b[1mduplicate.zip\u001b[0m\n",
+        "stderr": "\n\u001b[31m\u001b[1mABORTED:\u001b[0m\u001b[0m Ambiguous archive: duplicate entry names detected: ['same']\n"
+      }
+    },
+    "duplicate-directories": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'd/'"
+      },
+      "zipguard": {
+        "exit": 2,
+        "output": "\u001b[2mDry run \u2014 analyzing\u001b[0m \u001b[1mduplicate-directories.zip\u001b[0m\n",
+        "stderr": "\n\u001b[31m\u001b[1mABORTED:\u001b[0m\u001b[0m Ambiguous archive: duplicate entry names detected: ['d/']\n"
+      }
+    },
+    "file-directory": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "file/directory path conflict at 'thing'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "thing",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "thing/child",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "directory-file": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "file/directory path conflict at 'thing'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "thing/child",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "thing",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "nested-case": {
+      "pathward": {
+        "accepted": true,
+        "files": 2
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "Assets/a.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "assets/b.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "leading-dot": {
+      "pathward": {
+        "accepted": true,
+        "files": 1
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "./README.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "mixed-separators": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'a/b'"
+      },
+      "zipguard": {
+        "exit": 2,
+        "output": "\u001b[2mDry run \u2014 analyzing\u001b[0m \u001b[1mmixed-separators.zip\u001b[0m\n",
+        "stderr": "\n\u001b[31m\u001b[1mABORTED:\u001b[0m\u001b[0m Ambiguous archive: duplicate entry names detected: ['a/b']\n"
+      }
+    },
+    "repeated-separators": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'a//b'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "a/b",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "a//b",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "long-ascii-component": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "path component is 256 bytes, limit is 255: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "long-utf8-component": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "path component is 258 bytes, limit is 255: '\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5\u65e5",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "long-full-path": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "member depth 601 exceeds limit 64: 'segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/file.txt'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/segment/file.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "unicode-nfc-nfd": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'cafe\u0301.txt'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "caf\u00e9.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "cafe\u0301.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "unicode-hangul": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: '\u1100\u1161.txt'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "\uac00.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "\u1100\u1161.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "unicode-casefold-policy": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "duplicate or cross-platform path collision: 'strasse'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "stra\u00dfe",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "strasse",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "empty-name": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "empty archive member name is not allowed: ''"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "dot-directory": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "empty archive member name is not allowed: './'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 0,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "./",
+              "decision": "skipped",
+              "reason": "directory"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "root-directory": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "unsafe member name '/': absolute or drive-qualified path not allowed: '/'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 0,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "/",
+              "decision": "skipped",
+              "reason": "directory"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "parent": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "unsafe member name 'a/../b': parent-directory traversal detected: 'a/../b'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "a/../b",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "drive-relative": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "unsafe member name 'C:file': absolute or drive-qualified path not allowed: 'C:file'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 0,
+            "blocked": 1,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "C:file",
+              "decision": "blocked",
+              "reason": "Absolute Windows path in archive entry: 'C:file'"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "symlink": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "symlink member not allowed: 'link'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 0,
+            "blocked": 1,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "link",
+              "decision": "blocked",
+              "reason": "Archive contains a symlink which is blocked by policy"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "special": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "special-file member not allowed: 'fifo'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "fifo",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "directory-attribute": {
+      "pathward": {
+        "accepted": true,
+        "files": 1
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 2,
+            "allowed": 2,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "d",
+              "decision": "allowed",
+              "reason": "dry-run"
+            },
+            {
+              "name": "d/child",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "alternate-name": {
+      "pathward": {
+        "accepted": false,
+        "exception": "UnsafeArchiveError",
+        "message": "reserved Windows path component is not allowed: 'NUL.txt'"
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 1,
+            "allowed": 1,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [
+            {
+              "name": "NUL.txt",
+              "decision": "allowed",
+              "reason": "dry-run"
+            }
+          ],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    },
+    "many-entries": {
+      "pathward": {
+        "accepted": true,
+        "files": 10000
+      },
+      "zipguard": {
+        "exit": 2,
+        "output": "\u001b[2mDry run \u2014 analyzing\u001b[0m \u001b[1mmany-entries.zip\u001b[0m\n",
+        "stderr": "\n\u001b[31m\u001b[1mABORTED:\u001b[0m\u001b[0m Exceeded max_files limit of 1000 files\n"
+      }
+    },
+    "empty-archive": {
+      "pathward": {
+        "accepted": true,
+        "files": 0
+      },
+      "zipguard": {
+        "exit": 0,
+        "output": {
+          "json_preamble_present": true,
+          "aborted": false,
+          "abort_reason": "",
+          "summary": {
+            "total": 0,
+            "allowed": 0,
+            "blocked": 0,
+            "renamed": 0
+          },
+          "entries": [],
+          "entries_truncated": false
+        },
+        "stderr": ""
+      }
+    }
+  }
+}

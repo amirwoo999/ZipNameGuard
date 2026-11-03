@@ -1,0 +1,17 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "fixture": "synthetic repeated-byte clean ZIP; warm filesystem cache",
+  "entries": 2000,
+  "payload_bytes": 16384000,
+  "archive_bytes": 278022,
+  "repeats": 7,
+  "crc_test_median_ms": 57.61,
+  "filename_scan_median_ms": 11.448,
+  "nonportable_crc_passes": true,
+  "nonportable_finding_codes": [
+    "portable-name-collision",
+    "windows-device"
+  ],
+  "caveat": "Different tasks: CRC checks payload integrity; filename scan checks metadata policy. Synthetic timings do not predict production speed or human time saved."
+}

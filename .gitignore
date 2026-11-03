@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.ruff_cache/
+.mypy_cache/
+.coverage*
+demo.zip
+audit/corpus/*.zip
+audit/coverage.json
+audit/coverage.txt
+audit/verification-sandbox/

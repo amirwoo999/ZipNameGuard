@@ -1,0 +1,308 @@
+{
+  "valid-basic": {
+    "sha256": "47773744fd1f124bd918647de5201c37bc9244c5205416ce516045d53b568276",
+    "entries": 3,
+    "expected_codes": [],
+    "note": ""
+  },
+  "valid-unicode": {
+    "sha256": "8e6207ecfb5079ae16cac0d0a04e725489dbb15c700a4618af8ed5bcf8bc17bc",
+    "entries": 5,
+    "expected_codes": [],
+    "note": ""
+  },
+  "valid-boundaries": {
+    "sha256": "28a3441605b679f86f16e93cd06a27424083593285239d603e5d4c5dcfaee2d5",
+    "entries": 5,
+    "expected_codes": [],
+    "note": ""
+  },
+  "legacy-cp437": {
+    "sha256": "46b01620476bdf9a1628f9ce7dac4e95865eaeac3d305dca3751e6314502fba4",
+    "entries": 1,
+    "expected_codes": [],
+    "note": ""
+  },
+  "case": {
+    "sha256": "1c568bbf4116c4f7935b63b79c6e7500a1a7d42df1cfb368f474d836d255539f",
+    "entries": 2,
+    "expected_codes": [
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "trailing-dot": {
+    "sha256": "fe0c9c2c1374ad0d1149eeb58f598c7a417a0336aa460f727825e15907d46cd6",
+    "entries": 2,
+    "expected_codes": [
+      "trailing-dot-space",
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "trailing-space": {
+    "sha256": "c5afe6e1faf1b412668da38a07b649561fbc63ac023aa388e6c2dd61f4662cff",
+    "entries": 2,
+    "expected_codes": [
+      "trailing-dot-space",
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "devices": {
+    "sha256": "f508263ff7409ef5b41d39fe50a75138cc7702d6689aa9e43cb42a19eb3c7cd7",
+    "entries": 10,
+    "expected_codes": [
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device"
+    ],
+    "note": ""
+  },
+  "device-extensions": {
+    "sha256": "84118b7ed32d5581a522273df18808d80b275b693bbee0d3cec3310cc63d8222",
+    "entries": 10,
+    "expected_codes": [
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device",
+      "windows-device"
+    ],
+    "note": ""
+  },
+  "forbidden": {
+    "sha256": "92610fb8686c9428e75cbb6ce21c94fc64de077c80f985a485c33ea44e2075ff",
+    "entries": 9,
+    "expected_codes": [
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character",
+      "windows-character"
+    ],
+    "note": ""
+  },
+  "nul": {
+    "sha256": "dd780b44c201f8eac92cb164e35ecf7b08e35b18f2501f2012c4fb73e0cb2dc0",
+    "entries": 1,
+    "expected_codes": [
+      "windows-character"
+    ],
+    "note": ""
+  },
+  "duplicate": {
+    "sha256": "b002a04c1a7f391616396379e11f47f747861ca5dedc4fc88ce594ca48bf6aae",
+    "entries": 2,
+    "expected_codes": [
+      "duplicate-entry"
+    ],
+    "note": ""
+  },
+  "duplicate-directories": {
+    "sha256": "cd04da0f23ecec416bf9d06858b08d6b763c52839e2a3c0741ce765cf3a3fddb",
+    "entries": 2,
+    "expected_codes": [
+      "duplicate-entry"
+    ],
+    "note": ""
+  },
+  "file-directory": {
+    "sha256": "a90160404bd7440d2b0c1dadc8b9c0cce3975471fd4d727757be439083f652f3",
+    "entries": 2,
+    "expected_codes": [
+      "file-directory-conflict"
+    ],
+    "note": ""
+  },
+  "directory-file": {
+    "sha256": "45a75c8b833142c02bb3acacd9c14f39d332176e25a73241870e57e4e447d949",
+    "entries": 2,
+    "expected_codes": [
+      "file-directory-conflict"
+    ],
+    "note": ""
+  },
+  "nested-case": {
+    "sha256": "1aea85643257df7fcd6d5f2c2f5cd6f63b8077b5857702c26f811d7bdc0f7d94",
+    "entries": 2,
+    "expected_codes": [
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "leading-dot": {
+    "sha256": "cfdfb58035cfb5a3c92d252b4009bd264df5ff927ad96243cd1c5f290e07478e",
+    "entries": 1,
+    "expected_codes": [
+      "noncanonical-path"
+    ],
+    "note": ""
+  },
+  "mixed-separators": {
+    "sha256": "c5799b22914f173652b517a38f2facd1f2cdbfd3fa076dbb4b4ed7c9fb286eba",
+    "entries": 2,
+    "expected_codes": [
+      "backslash-path",
+      "normalized-path-collision"
+    ],
+    "note": ""
+  },
+  "repeated-separators": {
+    "sha256": "93954e588e08c6925f0c73b1ae5ebc12c06b66d4a6e2acd6e7fb11cf43bae275",
+    "entries": 2,
+    "expected_codes": [
+      "noncanonical-path",
+      "normalized-path-collision"
+    ],
+    "note": ""
+  },
+  "long-ascii-component": {
+    "sha256": "46f0c24a4df34a8b2791086607cb7187a15fef54315ff683a5fd6dd847ff8bd2",
+    "entries": 1,
+    "expected_codes": [
+      "long-component"
+    ],
+    "note": ""
+  },
+  "long-utf8-component": {
+    "sha256": "ab586e5da8e7019d9c1a69a657141d1c22f8e8bea8b3fb7012055045c13a031d",
+    "entries": 1,
+    "expected_codes": [
+      "long-component"
+    ],
+    "note": ""
+  },
+  "long-full-path": {
+    "sha256": "df26d2930ca45795385e98fe8dc23019432738328d46b57b8b015f682b516225",
+    "entries": 1,
+    "expected_codes": [],
+    "note": "Known gap: complete destination path limits are not checked."
+  },
+  "unicode-nfc-nfd": {
+    "sha256": "0c8974eb056e6f1f846f8f788f0cf710d53d21d432bc62eb24e57bc9215aaf2a",
+    "entries": 2,
+    "expected_codes": [
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "unicode-hangul": {
+    "sha256": "958ba0cb02e5b90b07bf0d2f8668347f2cfcf4a7b225b75efa9d1cb70190f335",
+    "entries": 2,
+    "expected_codes": [
+      "portable-name-collision"
+    ],
+    "note": ""
+  },
+  "unicode-casefold-policy": {
+    "sha256": "4d6c3152cf004ecfa5db956e67c89da9e3cbedd1e4ca98b102b3e17b6f53c3c1",
+    "entries": 2,
+    "expected_codes": [
+      "portable-name-collision"
+    ],
+    "note": "Conservative full-casefold policy; not exact NTFS behavior."
+  },
+  "empty-name": {
+    "sha256": "9ef6b9a35f8b5f76ad84bd30147a850d64570e2e0105a4b03e2f1da198cdc541",
+    "entries": 1,
+    "expected_codes": [
+      "empty-name"
+    ],
+    "note": ""
+  },
+  "dot-directory": {
+    "sha256": "c6e088e21b21295b6597a254cdfd0280baebf66b82e64ad42aeb232a85a25302",
+    "entries": 1,
+    "expected_codes": [
+      "noncanonical-path"
+    ],
+    "note": ""
+  },
+  "root-directory": {
+    "sha256": "93e0552bb9d2fc3a28c6d43e77ec5190dff8a714ce5d4906d8cc33844faf2f9d",
+    "entries": 1,
+    "expected_codes": [
+      "absolute-path",
+      "noncanonical-path"
+    ],
+    "note": ""
+  },
+  "parent": {
+    "sha256": "807ec3737c93d227ff962210e544d64a2819fa70fc33127774e390f1afa27bcf",
+    "entries": 1,
+    "expected_codes": [
+      "parent-path"
+    ],
+    "note": ""
+  },
+  "drive-relative": {
+    "sha256": "a140b82d666c569218a30391bdfcbbd87064f2cd0e2ffe4d2dd92722f5556ec0",
+    "entries": 1,
+    "expected_codes": [
+      "absolute-path",
+      "windows-character"
+    ],
+    "note": ""
+  },
+  "symlink": {
+    "sha256": "eb2d82a19c9e1d8b50ba07b4c9bd432e0d1e836de4755ba21ea26fa6cc3a2fd6",
+    "entries": 1,
+    "expected_codes": [
+      "symlink-entry"
+    ],
+    "note": ""
+  },
+  "special": {
+    "sha256": "6c1936ead9c83510b508d773fe224258df65d524079b62e6af23b8dd5681b8e4",
+    "entries": 1,
+    "expected_codes": [
+      "special-entry"
+    ],
+    "note": ""
+  },
+  "directory-attribute": {
+    "sha256": "98e5c99e80dd108482e8c412cb51e77f9bd9dd99fb2bbe9f07aa6410e5ffad38",
+    "entries": 2,
+    "expected_codes": [
+      "directory-metadata"
+    ],
+    "note": ""
+  },
+  "alternate-name": {
+    "sha256": "536ba7aad0f1b4635fcbfa703bcd68e0ed31365494a18198e2eb09c839ed1747",
+    "entries": 1,
+    "expected_codes": [
+      "alternate-name-metadata"
+    ],
+    "note": ""
+  },
+  "many-entries": {
+    "sha256": "821a551ca36d0c7803a2030c189194ad17e0d6629536968071dc7a74a8f97f50",
+    "entries": 10000,
+    "expected_codes": [],
+    "note": ""
+  },
+  "empty-archive": {
+    "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+    "entries": 0,
+    "expected_codes": [],
+    "note": ""
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "audit_date": "2026-10-30",
+  "queries": {
+    "pypi-zipnameguard": {
+      "url": "https://pypi.org/pypi/zipnameguard/json",
+      "http_status": 404
+    },
+    "npm-zipnameguard": {
+      "url": "https://registry.npmjs.org/zipnameguard",
+      "http_status": 404
+    },
+    "crates-zipnameguard": {
+      "url": "https://crates.io/api/v1/crates/zipnameguard",
+      "http_status": 404
+    },
+    "github-name": {
+      "url": "https://api.github.com/search/repositories?q=zipnameguard+in:name",
+      "http_status": 200,
+      "total_count": 0,
+      "repositories": []
+    },
+    "pypi-pathward": {
+      "url": "https://pypi.org/pypi/pathward/json",
+      "http_status": 200,
+      "name": "pathward",
+      "version": "0.2.0",
+      "summary": "Root-bounded filesystem operations and preflighted archive extraction for Python.",
+      "requires_dist": [
+        "build>=1.2; extra == \"dev\"",
+        "mypy<2,>=1.11; extra == \"dev\"",
+        "pytest>=7.0; extra == \"dev\"",
+        "ruff>=0.8; extra == \"dev\"",
+        "twine>=5.1; extra == \"dev\""
+      ],
+      "project_urls": {
+        "Changelog": "https://github.com/m2hcz/pathward/blob/main/CHANGELOG.md",
+        "Homepage": "https://github.com/m2hcz/pathward",
+        "Issues": "https://github.com/m2hcz/pathward/issues",
+        "Repository": "https://github.com/m2hcz/pathward"
+      }
+    },
+    "pypi-zipguard": {
+      "url": "https://pypi.org/pypi/zipguard/json",
+      "http_status": 200,
+      "name": "zipguard",
+      "version": "0.2.0",
+      "summary": "Security-focused archive extraction tool with policy enforcement",
+      "requires_dist": [
+        "mypy; extra == \"dev\"",
+        "pytest; extra == \"dev\"",
+        "pytest-cov; extra == \"dev\"",
+        "ruff; extra == \"dev\""
+      ],
+      "project_urls": {
+        "Blog": "https://hivesecurity.gitlab.io",
+        "Homepage": "https://github.com/Mhacker1020/zipguard",
+        "Issues": "https://github.com/Mhacker1020/zipguard/issues",
+        "Repository": "https://github.com/Mhacker1020/zipguard"
+      }
+    }
+  }
+}
